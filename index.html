@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoAção — Pequenas atitudes, grande impacto</title>
+  <meta name="description" content="EcoAção: guia de reciclagem e consumo consciente para estudantes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="container cabecalho-conteudo">
+      <a href="#inicio" class="logo">EcoAção</a>
+      <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="menu" id="menu">
+        <a href="#inicio">Início</a>
+        <a href="#reciclagem">Reciclagem</a>
+        <a href="#dicas">Dicas</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero-conteudo">
+        <h1>Pequenas atitudes,<br>grande impacto.</h1>
+        <p>Aprenda a separar o lixo corretamente e a consumir de forma consciente no seu dia a dia.</p>
+        <a href="#reciclagem" class="botao">Começar agora</a>
+      </div>
+    </section>
+
+    <section id="reciclagem" class="secao verde">
+      <div class="container reciclagem-grid">
+        <div>
+          <h2>Cores da reciclagem</h2>
+          <p class="subtitulo">Clique em um material para ver onde ele deve ser descartado.</p>
+          <div class="filtros" id="filtros">
+            <button class="filtro ativo" data-tipo="todos">Todos</button>
+            <button class="filtro" data-tipo="papel">Papel</button>
+            <button class="filtro" data-tipo="plastico">Plástico</button>
+            <button class="filtro" data-tipo="vidro">Vidro</button>
+            <button class="filtro" data-tipo="metal">Metal</button>
+            <button class="filtro" data-tipo="organico">Orgânico</button>
+          </div>
+          <div class="grade-lixeiras">
+            <article class="lixeira azul" data-tipo="papel"><h3>Papel</h3><p>Lixeira <strong>azul</strong>: jornais, caixas, folhas e papelão.</p></article>
+            <article class="lixeira vermelha" data-tipo="plastico"><h3>Plástico</h3><p>Lixeira <strong>vermelha</strong>: garrafas PET, embalagens e sacolas.</p></article>
+            <article class="lixeira verde-lixeira" data-tipo="vidro"><h3>Vidro</h3><p>Lixeira <strong>verde</strong>: potes, garrafas e frascos.</p></article>
+            <article class="lixeira amarela" data-tipo="metal"><h3>Metal</h3><p>Lixeira <strong>amarela</strong>: latas de alumínio e de aço.</p></article>
+            <article class="lixeira marrom" data-tipo="organico"><h3>Orgânico</h3><p>Lixeira <strong>marrom</strong>: restos de comida e cascas.</p></article>
+          </div>
+        </div>
+        <img class="foto-lixeiras" src="img/lixeiras.jpg" alt="Lixeiras coloridas para coleta seletiva">
+      </div>
+    </section>
+
+    <section id="dicas" class="secao verde dicas">
+      <div class="container dicas-grid">
+        <img class="foto-reciclagem" src="img/reciclagem.png" alt="Garrafas plásticas separadas para reciclagem">
+        <div>
+          <h2>Dicas de consumo consciente</h2>
+          <div class="grade-dicas">
+            <article class="dica"><span>01</span><h3>Reduza</h3><p>Evite descartáveis e prefira garrafas e sacolas reutilizáveis.</p></article>
+            <article class="dica"><span>02</span><h3>Reutilize</h3><p>Potes e caixas podem ganhar uma nova função em casa.</p></article>
+            <article class="dica"><span>03</span><h3>Recicle</h3><p>Lave as embalagens antes de separar para a coleta seletiva.</p></article>
+            <article class="dica"><span>04</span><h3>Economize</h3><p>Feche a torneira e apague as luzes ao sair de um ambiente.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="secao quiz-secao">
+      <div class="container quiz">
+        <h2>Quiz: onde eu descarto?</h2>
+        <p class="quiz-progresso" id="quizProgresso"></p>
+        <p class="quiz-pergunta" id="quizPergunta"></p>
+        <div class="quiz-opcoes" id="quizOpcoes"></div>
+        <p class="quiz-resultado" id="quizResultado" aria-live="polite"></p>
+        <button class="botao quiz-botao" id="quizProxima" hidden>Próxima</button>
+      </div>
+    </section>
+
+    <section id="contato" class="secao contato">
+      <div class="container contato-grid">
+        <div>
+          <h2>Fale com a gente</h2>
+          <form class="formulario" id="formulario" novalidate>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+            <p class="formulario-aviso" id="formAviso" aria-live="polite"></p>
+            <button type="submit" class="botao botao-escuro">Enviar</button>
+          </form>
+        </div>
+        <img class="foto-contato" src="img/contato.png" alt="Ilustração sobre cuidado com o meio ambiente">
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container"><p>EcoAção © 2026 — Projeto Final de Autoria Web</p></div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
